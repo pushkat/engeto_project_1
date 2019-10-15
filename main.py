@@ -67,6 +67,7 @@ else:
     print()
   else:
     print('ACCESS DENIED')
+    exit()
 
 # Getting number of text to be analyzed
   choice = int(input('Please select the requested text (1, 2, 3): '))
