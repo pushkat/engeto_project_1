@@ -138,7 +138,7 @@ else:
     print('Number of numeric-only words: ' + str(numeric))
     print('-' * 60)
 
-# Statistics: bar charts
+# Statistics: bar charts - frequencies of word lengths in the text
     lenght = [len(x) for x in selection]
     unique = list(set(lenght))
     
@@ -146,9 +146,8 @@ else:
     
     while unique:
       if i < len(unique):
-        y = unique[i]
-        z = lenght.count(y)
-        print(str(y) + ' ' + str(z * '*') + ' ' + str(z))
+        lenght.count(unique[i])
+        print(str(unique[i]) + ' ' + str(lenght.count(unique[i]) * '*') + ' ' + str(lenght.count(unique[i])))
         i += 1
       else:
         break
