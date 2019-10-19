@@ -84,7 +84,7 @@ else:
 
 # Statistics: number of words in total
 preselection = texts[choice-1].split(' ')
-selection = [x.replace(',','').replace('.','').strip() for x in preselection]
+selection = [x.strip('.,') for x in preselection]
 print('Number of words in total: ' + str(len(selection)))
 
 # Statistics: number of words starting with capital
