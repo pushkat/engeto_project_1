@@ -97,7 +97,6 @@ while i < len(selection):
         i += 1
     else:
         i += 1
-        continue
 print('Number of words starting with capital letter: ' + str(titled))
 
 # Statistics: number of uppercase words
@@ -110,7 +109,6 @@ while i < len(selection):
         i += 1
     else:
         i += 1
-        continue
 print('Number of uppercase words: ' + str(uppercase))
 
 # Statistics: number of lowercase words
@@ -123,7 +121,6 @@ while i < len(selection):
         i += 1
     else:
         i += 1
-        continue
 print('Number of lowercase words: ' + str(lowercase))
 
 # Statistics: number of numeric-only words
@@ -138,7 +135,6 @@ while i < len(selection):
         i += 1
     else:
         i += 1
-        continue
 print('Number of numeric-only words: ' + str(numeric))
 print('-' * 60)
 
