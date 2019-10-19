@@ -71,11 +71,13 @@ else:
         exit()
 
 # Getting number of text to be analyzed
-choice = int(input('Please select the requested text (1, 2, 3): '))
+choice = input('Please select the requested text (1, 2, 3): ')
 print()
-if choice not in [1, 2, 3]:
-    print('Wrong number, try again')
+if choice not in ['1','2','3']:
+    print('Only numbers 1, 2 or 3 can be submitted')
+    exit()
 else:
+    choice = int(choice)
     print('-' * 60)
     print('STATISTICS FOR THE TEXT NUMBER ' + str(choice) + ':')
     print('-' * 60)
