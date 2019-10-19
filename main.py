@@ -51,6 +51,7 @@ username = input('Username: ')
 
 if username not in users:
     print("Username doesn't exist, try again")
+    exit()
 else:
     password = input('Password: ')
     if users[username] == password:
