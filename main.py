@@ -119,19 +119,16 @@ print('-' * 60)
 
 
 # Bar charts - frequencies of word lengths in the text
-lenght = [len(x) for x in selection]
-unique = list(set(lenght))
-    
+lengths = [len(x) for x in selection]
+unique = list(set(lengths))
 i = 0
-    
-while unique:
-    if i < len(unique):
-        lenght.count(unique[i])
-        print(str(unique[i]) + ' ' + str(lenght.count(unique[i]) * '*') + ' ' + str(lenght.count(unique[i])))
-        i += 1
-    else:
-        break
-                
+
+while i < len(unique):
+    length = unique[i]
+    count = lengths.count(length)
+    print(str(length) + ' ' + str(count * '*') + ' ' + str(count))
+    i += 1
+
 print('-' * 60)
 
 # Statistics: sum of numeric words
