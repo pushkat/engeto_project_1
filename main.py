@@ -87,58 +87,38 @@ preselection = texts[choice-1].split(' ')
 selection = [x.strip('.,') for x in preselection]
 print('Number of words in total: ' + str(len(selection)))
 
-# Statistics: number of words starting with capital
+# Statistics: titled, uppercased, lowercased, numeric words
 titled = 0
+uppercase = 0
+lowercase = 0
+numeric = 0
+numbers = []
 i = 0
 
 while i < len(selection):
     if selection[i].istitle():
         titled += 1
         i += 1
-    else:
-        i += 1
-print('Number of words starting with capital letter: ' + str(titled))
-
-# Statistics: number of uppercase words
-uppercase = 0
-i = 0
-
-while i < len(selection):
-    if selection[i].isupper() and selection[i].isalpha():
+    elif selection[i].isupper() and selection[i].isalpha():
         uppercase += 1
         i += 1
-    else:
-        i += 1
-print('Number of uppercase words: ' + str(uppercase))
-
-# Statistics: number of lowercase words
-lowercase = 0
-i = 0
-
-while i < len(selection):
-    if selection[i].islower():
+    elif selection[i].islower():
         lowercase += 1
         i += 1
-    else:
-        i += 1
-print('Number of lowercase words: ' + str(lowercase))
-
-# Statistics: number of numeric-only words
-numeric = 0
-numbers = []
-i = 0
-
-while i < len(selection):
-    if selection[i].isnumeric():
+    elif selection[i].isnumeric():
         numeric += 1
         numbers.append(float(selection[i])) 
         i += 1
     else:
         i += 1
+print('Number of words starting with capital letter: ' + str(titled))
+print('Number of uppercase words: ' + str(uppercase))
+print('Number of lowercase words: ' + str(lowercase))
 print('Number of numeric-only words: ' + str(numeric))
 print('-' * 60)
 
-# Statistics: bar charts - frequencies of word lengths in the text
+
+# Bar charts - frequencies of word lengths in the text
 lenght = [len(x) for x in selection]
 unique = list(set(lenght))
     
